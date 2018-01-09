@@ -41,6 +41,11 @@
     width: 1px;
   }
 
+  .incrementDown,
+  .incrementUp
+  {
+    display: none;
+  }
 
   #facadeArea,
   #floorArea,
@@ -161,22 +166,6 @@
       height: 20px;
       margin-right: 2.5px;
   }
-
-  /*effekttabellutskrift*/
-    .incrementDown,
-    .incrementUp
-    {
-      display: none;
-    }
-    p.effectCalculationFormLineHeading,
-    p.effectCalculationFormLine1,
-    p.effectCalculationFormLine2,
-    .inputAreaFormEffectCalculation
-    {
-      font-size: 20px;
-      display: table-cell;
-    }
-
 
 
 }

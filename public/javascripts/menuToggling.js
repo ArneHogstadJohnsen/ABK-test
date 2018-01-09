@@ -14,8 +14,8 @@ var effectFromEnergyText = 'Fyll inn energibehovet og balansetemperatur for &ari
 var effectFromEnergyPic = "forbruk.png" ;
 var simulationText = 'Bruk effektbehov ved DUT for &aring finne en passende varmepumpe';
 var simulationPic = "varighetskurve.png";
-var offerText = '';
-var offerPic ="none.png" ;
+var offerText = 'Lag tilbud p&aring varmepumpel&oslashsningen du har valgt';
+var offerPic ="tilbud.png" ;
 
 var titleText = ["<strong>Forrige steg</strong></br>","<strong>Dette steget</strong></br>" ,"<strong>Neste steg</strong></br>"];
 var globalPreviousPicture = [homePic,homePic,homePic,simulationPic,offerPic];
@@ -160,7 +160,6 @@ jQuery('.energyCalculation').on('click', function(event) {
   var prevText = titleText[0] + globalPreviousText[2];
   var curText = titleText[1] + simulationText;
   var nextText = titleText[2] + offerText;
-  $('#menuDescriptionNext').html("")
   pos=2;
 
   insertPictures(globalPreviousPicture[2],simulationPic,offerPic,prevText,curText,nextText);
@@ -213,7 +212,6 @@ jQuery('.navButton1').on('click',function(event){
   jQuery('.navButton6').on('click', function(event) {
     $('.wizardStart').html("Start veileder");
         $( ".energyCalculation" ).trigger( "click" );
-        $('#menuDescriptionNext').html("");
   });
   jQuery('.navButton7').on('click', function(event) {
     $('.wizardStart').html("Start veileder");
@@ -379,7 +377,7 @@ $('#prevNextNav').on("click", ".menuButtonsPrev", function(event){
 $('#prevNextNav').on("click", ".menuButtonsNext", function(event){
   if (pos == 0){$( ".navButton5" ).trigger( "click" );}
   else if (pos == 1){$( ".navButton6" ).trigger( "click" );}
-  else if (pos == 2){$( ".navButton7" ).trigger( "click" );$('#menuDescriptionNext').html("");}
+  else if (pos == 2){$( ".navButton7" ).trigger( "click" );}
 });
 
 });

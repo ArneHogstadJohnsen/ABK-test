@@ -81,9 +81,7 @@ label.effectCalcOverskriftHoyre,label.effectCalcVerdiHoyre{
   width: 200px;
 }
 
-label.effectCalcKnapp,
-label.effectCalcKnappTopp
-{
+label.effectCalcKnapp{
   display: table-cell;
   vertical-align:middle;
   text-align: center;

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+﻿$(document).ready(function() {
 
 
   //Global definition of chart
@@ -393,6 +393,7 @@ var createChart = function() {
       $("#municipality").autocomplete({
         source: globalMunicipalityArray,
         minLength: 2,
+        autoFocus: true,
         select: function(event, ui) {
           globalTempMean = ui.item.tempMean;
           globalTempDOT = ui.item.tempDUT;
@@ -415,6 +416,7 @@ var createChart = function() {
       $("#municipalityHistoricalEnergy").autocomplete({
         source: globalMunicipalityArray,
         minLength: 2,
+        autoFocus: true,
         select: function(event, ui) {
           //first taking care of local business
           globalHistoricalEnergyTempMean = ui.item.tempMean;
@@ -449,6 +451,7 @@ var createChart = function() {
       $("#municipalityEffectEnergyInfoRegulation").autocomplete({
         source: globalMunicipalityArray,
         minLength: 2,
+        autoFocus: true,
         select: function(event, ui) {
           globalEnergyRegulationDegreedays = ui.item.gradtall;
           globalEnergyRegulationTemMean = ui.item.tempMean;
@@ -484,6 +487,7 @@ var createChart = function() {
       $("#effectFromEnergyMunicipality").autocomplete({
         source: globalMunicipalityArray,
         minLength: 2,
+        autoFocus: true,
         select: function(event, ui) {
           globalEffectFromEnergyTemMean = ui.item.tempMean;
           globalEffectFromEnergyTempDOT = ui.item.tempDUT;
@@ -514,6 +518,7 @@ var createChart = function() {
       $("#areaEffectMunicipality").autocomplete({
         source: globalMunicipalityArray,
         minLength: 2,
+        autoFocus: true,
         select: function(event, ui) {
           $('#outdoorTemp').val(ui.item.tempDUT);
           $('#outdoorTemp').trigger("input");
@@ -590,6 +595,7 @@ var createChart = function() {
       $("#buildingStandard").autocomplete({
         source: localStandardArray,
         minLength: 1,
+        autoFocus: true,
         select: function(event, ui) {
           $("#resultTextStandard").html(ui.item.value );
         }
@@ -601,6 +607,7 @@ var createChart = function() {
       $("#buildingStandard2").autocomplete({
         source: localStandardArray,
         minLength: 1,
+        autoFocus: true,
         select: function(event, ui) {
           $("#buildingStandard2").val(ui.item.value );
           updateUvalueFormValues();
@@ -626,6 +633,7 @@ var createChart = function() {
       $("#standardEffectEnergyInfoRegulation").autocomplete({
         source: [ localStandardArray[0], localStandardArray[1] ],
         minLength: 1,
+        autoFocus: true,
         select: function(event, ui) {
           if ( $("#municipalityEffectEnergyInfoRegulation").val() != "" && $("#buildingCategoryEffectEnergyInfoRegulation").val() != "" && $("#buildingBRAEffectEnergyInfoRegulation").val() != ""){
             getGlobalTemperatureArray(globalEnergyRegulationTemMean,globalEnergyRegulationTempDOT);
@@ -664,6 +672,7 @@ var createChart = function() {
       $("#buildingCategory").autocomplete({
         source: localCategorydArray,
         minLength: 1,
+        autoFocus: true,
         select: function(event, ui) {
           $("#resultTextBuildingCategory").html(ui.item.value );
         }
@@ -675,6 +684,7 @@ var createChart = function() {
       $("#buildingCategoryEffectEnergyInfoRegulation").autocomplete({
         source: localCategorydArray,
         minLength: 1,
+        autoFocus: true,
         select: function(event, ui) {
           if ( $("#standardEffectEnergyInfoRegulation").val() != "" && $("#municipalityEffectEnergyInfoRegulation").val() != "" && $("#buildingBRAEffectEnergyInfoRegulation").val() != ""){
             getGlobalTemperatureArray(globalEnergyRegulationTemMean,globalEnergyRegulationTempDOT);

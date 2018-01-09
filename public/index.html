@@ -52,6 +52,7 @@
       <div class="wizardTab" id="wizard">
         <button type="button" class="wizardButton wizardStart">Start veileder</button>
         <div id="wizardStep1" hidden>
+          <button type="button" class="wizardButton wizardButtonStep1 wizardVetPumpe">Jeg vet hva jeg skal ha </button>
           <button type="button" class="wizardButton wizardButtonStep1 wizardHarEffekt">Jeg har effektbehovet</button>
           <button type="button" class="wizardButton wizardButtonStep1 wizardHarIkkeEffekt">Jeg har ikke effektbehov</button>
         </div>
@@ -151,14 +152,13 @@
 
           <button  type="button" class="menuButtons generateOffer"  id="offerButton">
             <div class="image">
-              <img class="buttonImage" src="Pictures/tilbud.png" height="200px" width="330px"/>
+              <img class="buttonImage" src="/Pictures/tilbud.png" height="200px" width="330px"/>
               <h3 id="generateOfferText"><span>Generer et tilbud:<br />-Du bestemmer svartiden<br />-F&aring &oslashkt rabatt<br />-Bli mer selvstendig</span></h3>
             </div>
             <div class="buttonText" id="generateOfferDivText">
                 Generer tilbud
             </div>
           </button>
-
       </div>
       <div id="selectedTabDiv" hidden>
         <div class="preNextNavClass"id="prevNextNav" hidden>
@@ -209,9 +209,9 @@
             <p class="effectCalculationFormLineHeading">
               <label class="effectCalculationOverskriftVenstre" id="effectCalcColumnTitle1">Hva</label>
               <label class="effectCalculationOverskriftMidt" id="effectCalcColumnTitle2">Areal</label>
-              <label class="effectCalcKnappTopp"></label>
+              <label class="effectCalcKnapp"></label>
               <label class="effectCalculationOverskriftMidt" id="effectCalcColumnTitle3">U-verdi</label>
-              <label class="effectCalcKnappTopp"></label>
+              <label class="effectCalcKnapp"></label>
               <label class="effectCalculationOverskriftMidt" id="effectCalcColumnTitle4">T<span style="vertical-align: sub; font-size: 12px;">inne</span></label>
               <label class="effectCalculationOverskriftMidt" id="effectCalcColumnTitle5">T<span style="vertical-align: sub; font-size: 12px;">ute</span></label>
               <label class="effectCalcOverskriftHoyre" id="effectCalcColumnTitle6">Effektbehov</label>
